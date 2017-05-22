@@ -5,7 +5,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="baseUrl" content="http://localhost/dbproject/">
-	<title>4AngelsShopping</title>
+	<title>Kuma Cafe</title>
     
 	<style>
   	@import url('http://fonts.googleapis.com/css?family=Gabriela');
@@ -72,12 +72,6 @@
 						if($admin == true || $member == true) : ?>
 					<li><a href="cart.php" class="page-scroll">Cart</a></li>
 					<?php endif; ?>
-					<?php
-						$admin = isset($_SESSION['adminpage']) ? $_SESSION['adminpage'] : null;
-						if($admin == true) : ?>
-					<li><a href="promotion.php" class="page-scroll">Promotion</a></li>
-					<li><a href="member.php" class="page-scroll">Member</a></li>
-					<?php endif; ?>
 				</ul>
 
 				<ul class="nav navbar-nav navbar-right">
@@ -85,15 +79,8 @@
 						$admin = isset($_SESSION['adminpage']) ? $_SESSION['adminpage'] : null;
 						$member = isset($_SESSION['memberpage']) ? $_SESSION['memberpage'] : null;
 						if($admin == false && $member == false) : ?>
-					<li><a href="register.php"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-					<li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Sign In</a></li>
-					<?php endif; ?>
-					<?php
-						$admin = isset($_SESSION['adminpage']) ? $_SESSION['adminpage'] : null;
-						$member = isset($_SESSION['memberpage']) ? $_SESSION['memberpage'] : null;
-						if($admin == true || $member == true) : ?>
-					<li><a href="profile.php"><span class="glyphicon glyphicon-user"></span> Hello, {{ name }}</a></li>
-					<li><a href="logout.php"><span class="glyphicon glyphicon-log-out"></span> Sign Out</a></li>
+					<li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+					<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Sign In</a></li>
 					<?php endif; ?>
 				</ul>
 			</div>
