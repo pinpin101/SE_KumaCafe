@@ -4,16 +4,29 @@
 <html lang="en" ng-app="app">
 <head>
 	<meta charset="UTF-8">
-	<meta name="baseUrl" content="http://localhost/dbproject/">
-	<title>4AngelsShopping</title>
+	<meta name="baseUrl" content="http://localhost/SEproject/">
+	<title>Kuma Cafe</title>
 	<style>
 		.content-page{
 			margin-top: 65px;
 		}
 	</style>
 </head>
-<link rel="stylesheet" href="assets/css/bootstrap.min.css">
-<link rel="stylesheet" href="assets/css/bootstrap-theme.min.css">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/bootstrap-theme.min.css">
+    <!-- Custom CSS -->
+    <link href="assets/css/modern-business.css" rel="stylesheet">
+
+
+    <!-- Custom Fonts -->
+    <link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    
+    <!-- pop up section -->
+    
+    
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+  <link rel="icon" href="img/icon.png">
 
 <body id="page-top" ng-controller="mainController">
 	<!-- Navigation -->
@@ -26,24 +39,14 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand page-scroll" href="#page-top"><img src="img/4Angelslogo.png" height="31px"></a>
+				<a class="navbar-brand page-scroll" href="index.php"><img src="img/homebutton.png" height="40"></a>
 			</div>
 			<div class="collapse navbar-collapse navbar-ex1-collapse">
 				<ul class="nav navbar-nav">
-					<li><a href="index.php" class="page-scroll">Home</a></li>
-					<li><a href="product.php" class="page-scroll">Product</a></li>
-					<?php
-						$admin = isset($_SESSION['adminpage']) ? $_SESSION['adminpage'] : null;
-						$member = isset($_SESSION['memberpage']) ? $_SESSION['memberpage'] : null;
-						if($admin == true || $member == true) : ?>
-					<li><a href="cart.php" class="page-scroll">Cart</a></li>
-					<?php endif; ?>
-					<?php
-						$admin = isset($_SESSION['adminpage']) ? $_SESSION['adminpage'] : null;
-						if($admin == true) : ?>
-					<li><a href="promotion.php" class="page-scroll">Promotion</a></li>
-					<li><a href="member.php" class="page-scroll">Member</a></li>
-					<?php endif; ?>
+					<li><a href="product.php" class="page-scroll"><img src="img/menubutton.png" height="40"></a></li>
+					<li><a href="#" class="page-scroll"><img src="img/promotionbutton.png" height="40"></a></li>
+					<li><a href="#" class="page-scroll"><img src="img/reservationbutton.png" height="40"></a></li>
+					<li><a href="#" class="page-scroll"><img src="img/contactbutton.png" height="40"></a></li>
 				</ul>
 
 				<ul class="nav navbar-nav navbar-right">
@@ -51,8 +54,8 @@
 						$admin = isset($_SESSION['adminpage']) ? $_SESSION['adminpage'] : null;
 						$member = isset($_SESSION['memberpage']) ? $_SESSION['memberpage'] : null;
 						if($admin == false && $member == false) : ?>
-					<li><a href="register.php"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-					<li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Sign In</a></li>
+					<li><a href="#register" data-toggle="modal"><img src="img/signupbutton.png" height="40"></a></li>
+					<li><a href="#login" data-toggle="modal"><img src="img/signinbutton.png" height="40"></a></li>
 					<?php endif; ?>
 					<?php
 						$admin = isset($_SESSION['adminpage']) ? $_SESSION['adminpage'] : null;
