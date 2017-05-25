@@ -23,7 +23,7 @@
 
 	.content-page h3 { color: #514b53; font-family: 'Rouge Script', cursive; font-size: 18px; font-weight: normal; line-height: 0px; margin: 0 0 50px; text-align: center; text-shadow: 1px 1px 2px #082b34; }
 	
-.content-page p { color: #514b53; font-family: 'Raleway',sans-serif; font-size: 16px; font-weight: 500; line-height: 22px;  text-align: center; margin: 0 0 24px 
+.content-page p { color: #514b53; font-family: 'Raleway',sans-serif; font-size: 16px; font-weight: 500; line-height: 22px;  text-align: center; margin: 0 0 24px; }
 
 		.content-page{
 			margin-top: 65px;
@@ -60,18 +60,14 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand page-scroll" href="index.php"><img src="img/4Angelslogo.png" height="31px"></a>     <!--  ******  -->
+				<a class="navbar-brand page-scroll" href="index.php"><img src="img/homebutton.png" height="50"></a>     <!--  ******  -->
 			</div>
 			<div class="collapse navbar-collapse navbar-ex1-collapse">
 				<ul class="nav navbar-nav">
-					<li><a href="index.php" class="page-scroll">Home</a></li>
-					<li><a href="product.php" class="page-scroll">Product</a></li>
-					<?php
-						$admin = isset($_SESSION['adminpage']) ? $_SESSION['adminpage'] : null;
-						$member = isset($_SESSION['memberpage']) ? $_SESSION['memberpage'] : null;
-						if($admin == true || $member == true) : ?>
-					<li><a href="cart.php" class="page-scroll">Cart</a></li>
-					<?php endif; ?>
+					<li><a href="product.php" class="page-scroll"><img src="img/menubutton.png" height="50"></a></li>
+					<li><a href="#" class="page-scroll"><img src="img/promotionbutton.png" height="50"></a></li>
+					<li><a href="#" class="page-scroll"><img src="img/reservationbutton.png" height="50"></a></li>
+					<li><a href="#" class="page-scroll"><img src="img/contactbutton.png" height="50"></a></li>
 				</ul>
 
 				<ul class="nav navbar-nav navbar-right">
@@ -79,8 +75,8 @@
 						$admin = isset($_SESSION['adminpage']) ? $_SESSION['adminpage'] : null;
 						$member = isset($_SESSION['memberpage']) ? $_SESSION['memberpage'] : null;
 						if($admin == false && $member == false) : ?>
-					<li><a href="#register" data-toggle="modal"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-					<li><a href="#login" data-toggle="modal"><span class="glyphicon glyphicon-log-in"></span> Sign In</a></li>
+					<li><a href="#register" data-toggle="modal"><img src="img/signupbutton.png" height="50"></a></li>
+					<li><a href="#login" data-toggle="modal"><img src="img/signinbutton.png" height="50"></a></li>
 					<?php endif; ?>
 				</ul>
 			</div>
@@ -92,6 +88,7 @@
 	<div class="content-page">
 		<div class="container">
     		<div class="col-md-8"> 
+    			<img src="img/kumacafe.png" width="650">
 				<div id="myCarousel" class="carousel slide" data-ride="carousel">
 			        <!-- Indicators -->
 			        <ol class="carousel-indicators">
@@ -132,7 +129,6 @@
 			</div>
 		</div>
 	</div>
-
 
 	<!-- Modal -->
 	<div class="container">
