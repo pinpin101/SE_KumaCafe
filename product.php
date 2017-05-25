@@ -108,95 +108,82 @@
 
 	<div class="content-page">
 		<div class="container">
-    	<div class="col-md-4"> 
-        <table>
-			<tr>
-				<th>CATEGORY</th>
-    
-			</tr>
-			<tr>
-				<td><a href="#Main Course">MAIN COURSE</td>
-    
-			</tr>
-			<tr>
-				<td><a href="#Drink">DRINK</td>
-    
-			</tr>
-			<tr>
-				<td><a href="#Dessert">DESSERT</td>
-			</tr>  
-
-		</table>
+    		<div class="col-md-4"> 
+        		<table>
+					<tr>
+						<th>CATEGORY</th>    
+					</tr>
+					<tr>
+						<td><a href="#Main Course">MAIN COURSE</a></td>
+					</tr>
+					<tr>
+						<td><a href="#Drink">DRINK</a></td>
+					</tr>
+					<tr>
+						<td><a href="#Dessert">DESSERT</a></td>
+					</tr>
+				</table>
+			</div>
          
-       	<div class="col-md-8">
-		<h3 class="lead">MENU</h3>
-		<div class="well">
-		<div class="row">
-			 <div class="col-sm-6 col-lg-6 col-md-6">
-                        <div class="thumbnail">
-                            <img src="img/coffee.jpg" alt="">
-                            <div class="caption">
-                                <h4><a href="http://localhost/onlineshopping/product_detail.php?product_id=1">KUMA Coffee</a>
-                                </h4>
-                            </div>
-                            <div class="ratings">
-								<p class = "pull-right">Price</p>
-                                <button class="button">Buy</button>
-                                
-                            </div>
-                        </div>
-                    </div>
+       		<div class="col-md-8">
+				<h3 class="lead">MENU</h3>
+				<div class="well">
+					<div class="row">
+						<div class="col-sm-6 col-lg-6 col-md-6">
+                        	<div class="thumbnail">
+                        	    <img src="img/coffee.jpg" alt="">
+                        	    <div class="caption">
+                             	   <h4><a href="http://localhost/onlineshopping/product_detail.php?product_id=1">KUMA Coffee</a></h4>
+                           		</div>
+                            	<div class="ratings">
+									<p class = "pull-right">Price</p>
+                                	<button class="button">Buy</button>    
+                            	</div>
+                        	</div>
+                    	</div>
 					
-				<div class="col-sm-6 col-lg-6 col-md-6">
-                        <div class="thumbnail">
-                            <img src="img/smoothie.jpg" alt="">
-                            <div class="caption">
-                                <h4><a href="http://localhost/onlineshopping/product_detail.php?product_id=1">KUMA Smoothie</a>
-                                </h4>
-                            </div>
-                            <div class="ratings">
-								<p class = "pull-right">Price</p>
-                                <button class="button">Buy</button>
-                                
-                            </div>
-                        </div>
-                    </div>
+						<div class="col-sm-6 col-lg-6 col-md-6">
+                        	<div class="thumbnail">
+                            	<img src="img/smoothie.jpg" alt="">
+                           		<div class="caption">
+                                	<h4><a href="http://localhost/onlineshopping/product_detail.php?product_id=1">KUMA Smoothie</a></h4>
+                           		</div>
+                            	<div class="ratings">
+									<p class = "pull-right">Price</p>
+                                	<button class="button">Buy</button>
+								</div>
+                        	</div>
+                    	</div>
 
-				<div class="col-sm-6 col-lg-6 col-md-6">
-                        <div class="thumbnail">
-                            <img src="img/hotmilk.jpg" alt="">
-                            <div class="caption">
-                                <h4><a href="http://localhost/onlineshopping/product_detail.php?product_id=1">KUMA Hot Milk</a>
-                                </h4>
-                            </div>
-                            <div class="ratings">
-								<p class = "pull-right">Price</p>
-                                <button class="button">Buy</button>
-                                
-                            </div>
-                        </div>
-                    </div>
+						<div class="col-sm-6 col-lg-6 col-md-6">
+                        	<div class="thumbnail">
+                          		<img src="img/hotmilk.jpg" alt="">
+                            	<div class="caption">
+                                	<h4><a href="http://localhost/onlineshopping/product_detail.php?product_id=1">KUMA Hot Milk</a></h4>
+                            	</div>
+                            	<div class="ratings">
+									<p class = "pull-right">Price</p>
+                                	<button class="button">Buy</button>   
+                            	</div>
+                        	</div>
+                    	</div>
 				
-				<div class="col-sm-6 col-lg-6 col-md-6">
-                        <div class="thumbnail">
-                            <img src="img/beer.jpg" alt="">
-                            <div class="caption">
-                                <h4><a href="http://localhost/onlineshopping/product_detail.php?product_id=1">KUMA Beer</a>
-                                </h4>
-                            </div>
-                            <div class="ratings">
-								<p class = "pull-right">Price</p>
-                                <button class="button">Buy</button>
-                                
-                            </div>
-                        </div>
+						<div class="col-sm-6 col-lg-6 col-md-6">
+                        	<div class="thumbnail">
+                            	<img src="img/beer.jpg" alt="">
+                            	<div class="caption">
+                                	<h4><a href="http://localhost/onlineshopping/product_detail.php?product_id=1">KUMA Beer</a></h4>
+                            	</div>
+                            	<div class="ratings">
+									<p class = "pull-right">Price</p>
+                                	<button class="button">Buy</button>  
+                            	</div>
+                        	</div>
+                    	</div>
                     </div>
-                			
-		</div>	
-		</div>
-        </div>
-    </div>
-	</div>
+                </div>
+            </div>				
+    	</div>
 	</div>
 
 	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
@@ -206,10 +193,6 @@
 	<script src="assets/angularjs/mainController.js"></script>
 	<script src="assets/angularjs/indexService.js"></script>
     
-
-
-
-
 </body>
 
 </html>
