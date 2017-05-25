@@ -112,35 +112,35 @@
 
 	<div class="content-page">
 		<div class="container">
-    	<div class="col-md-3"> 
-		<h3 class="lead">MENU</h3>
+    	<div class="col-md-4"> 
         <table>
 			<tr>
 				<th>CATEGORY</th>
     
 			</tr>
 			<tr>
-				<td>MAIN COURSE</td>
+				<td><a href="#Main Course">MAIN COURSE</td>
     
 			</tr>
 			<tr>
-				<td>DRINK</td>
+				<td><a href="#Drink">DRINK</td>
     
 			</tr>
 			<tr>
-				<td>DESSERT</td>
+				<td><a href="#Dessert">DESSERT</td>
 			</tr>  
 
 		</table>
          
-       	<div class="col-md-9">
+       	<div class="col-md-8">
+		<h3 class="lead">MENU</h3>
 		<div class="well">
 		<div class="row">
-			 <div class="col-sm-4 col-lg-4 col-md-4">
+			 <div class="col-sm-6 col-lg-6 col-md-6">
                         <div class="thumbnail">
                             <img src="img/bed1.jpg" alt="">
                             <div class="caption">
-                                <h4><a href="http://localhost/onlineshopping/product_detail.php?product_id=1">name</a>
+                                <h4><a href="http://localhost/onlineshopping/product_detail.php?product_id=1">Name</a>
                                 </h4>
                             </div>
                             <div class="ratings">
@@ -151,11 +151,11 @@
                         </div>
                     </div>
 					
-				<div class="col-sm-4 col-lg-4 col-md-4">
+				<div class="col-sm-6 col-lg-6 col-md-6">
                         <div class="thumbnail">
                             <img src="img/bed1.jpg" alt="">
                             <div class="caption">
-                                <h4><a href="http://localhost/onlineshopping/product_detail.php?product_id=1">name</a>
+                                <h4><a href="http://localhost/onlineshopping/product_detail.php?product_id=1">Name</a>
                                 </h4>
                             </div>
                             <div class="ratings">
@@ -164,12 +164,43 @@
                                 
                             </div>
                         </div>
-                    </div>	
+                    </div>
+
+				<div class="col-sm-6 col-lg-6 col-md-6">
+                        <div class="thumbnail">
+                            <img src="img/bed1.jpg" alt="">
+                            <div class="caption">
+                                <h4><a href="http://localhost/onlineshopping/product_detail.php?product_id=1">Name</a>
+                                </h4>
+                            </div>
+                            <div class="ratings">
+								<p class = "pull-right">Price</p>
+                                <button class="button">Buy</button>
+                                
+                            </div>
+                        </div>
+                    </div>
+				
+				<div class="col-sm-6 col-lg-6 col-md-6">
+                        <div class="thumbnail">
+                            <img src="img/bed1.jpg" alt="">
+                            <div class="caption">
+                                <h4><a href="http://localhost/onlineshopping/product_detail.php?product_id=1">Name</a>
+                                </h4>
+                            </div>
+                            <div class="ratings">
+								<p class = "pull-right">Price</p>
+                                <button class="button">Buy</button>
+                                
+                            </div>
+                        </div>
+                    </div>
                 			
 		</div>	
 		</div>
         </div>
     </div>
+	</div>
 	</div>
 
 	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
