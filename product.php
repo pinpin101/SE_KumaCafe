@@ -80,18 +80,14 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand page-scroll" href="index.php"><img src="img/4Angelslogo.png" height="31px"></a>     <!--  ******  -->
+				<a class="navbar-brand page-scroll" href="index.php"><img src="img/homebutton.png" height="40"></a>
 			</div>
 			<div class="collapse navbar-collapse navbar-ex1-collapse">
 				<ul class="nav navbar-nav">
-					<li><a href="index.php" class="page-scroll">Home</a></li>
-					<li><a href="product.php" class="page-scroll">Product</a></li>
-					<?php
-						$admin = isset($_SESSION['adminpage']) ? $_SESSION['adminpage'] : null;
-						$member = isset($_SESSION['memberpage']) ? $_SESSION['memberpage'] : null;
-						if($admin == true || $member == true) : ?>
-					<li><a href="cart.php" class="page-scroll">Cart</a></li>
-					<?php endif; ?>
+					<li><a href="product.php" class="page-scroll"><img src="img/menubutton.png" height="40"></a></li>
+					<li><a href="#" class="page-scroll"><img src="img/promotionbutton.png" height="40"></a></li>
+					<li><a href="#" class="page-scroll"><img src="img/reservationbutton.png" height="40"></a></li>
+					<li><a href="#" class="page-scroll"><img src="img/contactbutton.png" height="40"></a></li>
 				</ul>
 
 				<ul class="nav navbar-nav navbar-right">
@@ -99,8 +95,8 @@
 						$admin = isset($_SESSION['adminpage']) ? $_SESSION['adminpage'] : null;
 						$member = isset($_SESSION['memberpage']) ? $_SESSION['memberpage'] : null;
 						if($admin == false && $member == false) : ?>
-					<li><a href="#register"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-					<li><a href="#login"><span class="glyphicon glyphicon-log-in"></span> Sign In</a></li>
+					<li><a href="#register" data-toggle="modal"><img src="img/signupbutton.png" height="40"></a></li>
+					<li><a href="#login" data-toggle="modal"><img src="img/signinbutton.png" height="40"></a></li>
 					<?php endif; ?>
 				</ul>
 			</div>
