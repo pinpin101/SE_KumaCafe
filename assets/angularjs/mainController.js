@@ -1,6 +1,7 @@
 'use strict';
 
 app.controller('mainController', ['$scope' , 'indexService', function($scope , indexService){
+	
 	$scope.showEdit = false;
 	getUsers();
 
