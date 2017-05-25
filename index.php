@@ -1,10 +1,10 @@
-<?php @session_start(); @ob_start(); ?>
+<?php @session_start(); @ob_start();?>
 
 <!DOCTYPE html>
 <html lang="en" ng-app="app">
 <head>
 	<meta charset="UTF-8">
-	<meta name="baseUrl" content="http://localhost/dbproject/">
+	<meta name="baseUrl" content="http://localhost/SEproject/">
 	<title>Kuma Cafe</title>
     
 	<style>
@@ -23,7 +23,7 @@
 
 	.content-page h3 { color: #514b53; font-family: 'Rouge Script', cursive; font-size: 18px; font-weight: normal; line-height: 0px; margin: 0 0 50px; text-align: center; text-shadow: 1px 1px 2px #082b34; }
 	
-.content-page p { color: #514b53; font-family: 'Raleway',sans-serif; font-size: 16px; font-weight: 500; line-height: 22px;  text-align: center; margin: 0 0 24px 
+.content-page p { color: #514b53; font-family: 'Raleway',sans-serif; font-size: 16px; font-weight: 500; line-height: 22px;  text-align: center; margin: 0 0 24px; }
 
 		.content-page{
 			margin-top: 65px;
@@ -46,10 +46,10 @@
     
     
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
-  <link rel="icon" href="img/angel-icon-32x32.png">
+  <link rel="icon" href="img/icon.png">
 
 
-<body id="page-top" ng-controller="mainController">
+<body id="page-top" ng-controller="indexController" background="img/yellow-pastel-bg.jpg">
 	<!-- Navigation -->
 	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 		<div class="container">
@@ -60,18 +60,14 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand page-scroll" href="index.php"><img src="img/4Angelslogo.png" height="31px"></a>
+				<a class="navbar-brand page-scroll" href="index.php"><img src="img/homebutton.png" height="50"></a>     <!--  ******  -->
 			</div>
 			<div class="collapse navbar-collapse navbar-ex1-collapse">
 				<ul class="nav navbar-nav">
-					<li><a href="index.php" class="page-scroll">Home</a></li>
-					<li><a href="product.php" class="page-scroll">Product</a></li>
-					<?php
-						$admin = isset($_SESSION['adminpage']) ? $_SESSION['adminpage'] : null;
-						$member = isset($_SESSION['memberpage']) ? $_SESSION['memberpage'] : null;
-						if($admin == true || $member == true) : ?>
-					<li><a href="cart.php" class="page-scroll">Cart</a></li>
-					<?php endif; ?>
+					<li><a href="product.php" class="page-scroll"><img src="img/menubutton.png" height="50"></a></li>
+					<li><a href="#" class="page-scroll"><img src="img/promotionbutton.png" height="50"></a></li>
+					<li><a href="#" class="page-scroll"><img src="img/reservationbutton.png" height="50"></a></li>
+					<li><a href="#" class="page-scroll"><img src="img/contactbutton.png" height="50"></a></li>
 				</ul>
 
 				<ul class="nav navbar-nav navbar-right">
@@ -79,190 +75,209 @@
 						$admin = isset($_SESSION['adminpage']) ? $_SESSION['adminpage'] : null;
 						$member = isset($_SESSION['memberpage']) ? $_SESSION['memberpage'] : null;
 						if($admin == false && $member == false) : ?>
-					<li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-					<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Sign In</a></li>
+					<li><a href="#register" data-toggle="modal"><img src="img/signupbutton.png" height="50"></a></li>
+					<li><a href="#login" data-toggle="modal"><img src="img/signinbutton.png" height="50"></a></li>
 					<?php endif; ?>
 				</ul>
 			</div>
 		</div>
 	</nav>
- 
-
-    <!-- Header Carousel -->
-    <header id="myCarousel" class="carousel slide">
-        <!-- Indicators -->
-        <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
-        </ol>
-
-        <!-- Wrapper for slides -->
-        <div class="carousel-inner">
-            <div class="item active">
-                <div class="fill" style="background-image:url('img/slide1.jpg');"></div>
-            </div>
-            <div class="item">
-                <div class="fill" style="background-image:url('img/slide2.jpg');"></div>
-                <div class="carousel-caption">
-                    <h2>New Sofa Arrival For Chirstmas</h2>
-                </div>
-            </div>
-            <div class="item">
-                <div class="fill" style="background-image:url('img/slide3.jpg');"></div>
-                <div class="carousel-caption">
-                    <h2>INSPIRE YOUR DREAM WITH THE BEST MATTRESS</h2>
-                </div>
-            </div>
-        </div>
-
-        <!-- Controls -->
-        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-            <span class="icon-prev"></span>
-        </a>
-        <a class="right carousel-control" href="#myCarousel" data-slide="next">
-            <span class="icon-next"></span>
-        </a>
-    </header>
 
     <!-- Page Content -->
 
 	<div class="content-page">
 		<div class="container">
-    	<div class="col-md-3"> 
+    		<div class="col-md-8"> 
+    			<img src="img/kumacafe.png" width="650">
+				<div id="myCarousel" class="carousel slide" data-ride="carousel">
+			        <!-- Indicators -->
+			        <ol class="carousel-indicators">
+			            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+			            <li data-target="#myCarousel" data-slide-to="1"></li>
+			            <li data-target="#myCarousel" data-slide-to="2"></li>
+			        </ol>
 
-        <h3 class="lead">Product Catagory</h3>
-         <img src="img/4Angelslogo.png" alt="">
-             	<div class="list-group">
-                    <a href="product_bed.php" class="list-group-item">BED</a>
-                    <a href="product_sofa.php" class="list-group-item">SOFA</a>
-                    <a href="product_mattress.php" class="list-group-item">MATTRESS</a>
-                </div>
-         </div>		
-         
-         
-        <hr>
- 
+			        <!-- Wrapper for slides -->
+			        <div class="carousel-inner">
+			            <div class="item active">
+			                <img src="img/menu1.jpg" width="800" height="500">
+			            </div>
+			            <div class="item">
+			                <img src="img/menu2.jpg" width="800" height="500">
+			            </div>
+			            <div class="item">
+			                <img src="img/menu3.png" width="800" height="500">
+			            </div>
+			        </div>
 
-         
-         
-         
-         
-       	<div class="col-md-9">
-		<div class="well">
-		<div class="row">
-        
-                <h2>We stand for quality</h2>
-                <br>
-                <br>
-                <p>We never compromise on design and would be foolish to compromise on quality. Only the finest materials are used in our furniture. We also employ inspectors that ensure technically-sound components and design throughout the process. These experts oversee production, checking in at key transaction points so that nothing is overlooked. Before an item is packaged, it is reviewed with a keen eye and must pass a comprehensive checklist by our quality control inspector.
-                </p>
-<p>We operate through several focused businesses, brands, and distribution channels. All of them work to design and build a better world around you.</p>
-          <p>
-                <a class="btn btn-default btn-lg" href="product.php">Select Product &raquo;</a></p>
-                
-               <hr width=50% size=5 color=770088>
-          <h1>	 RECOMMENDATION </h1>
+			        <!-- Controls -->
+			        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+			            <span class="glyphicon glyphicon-chevron-left"></span>
+			            <span class="sr-only">Previous</span>
+			        </a>
+			        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+			            <span class="glyphicon glyphicon-chevron-right"></span>
+   						<span class="sr-only">Next</span>
+			        </a>
+			    </div>
+       		
+        	</div>
+            
+       		<div class="col-md-4">
+				<img src="img/kuma1.png" width="450">
 
-        
-                            <div class="col-sm-4 col-lg-4 col-md-4">
-                        <div class="thumbnail">
-                           <img src="img/bed1.jpg" alt="">
-                            <div class="caption">
-                              	<h4 class="pull-right">price Baht</h4>
-                                <h4><a href="http://localhost/onlineshopping/product_detail.php?product_id=1">name</a>
-                                </h4>
-                                <p>details: see more detail and buy it to be your own - <a target="_blank" href="http://localhost/onlineshopping/product_detail.php?product_id=1">Click</a>.</p>
-                          </div>
-                            <div class="ratings">
-                                <p>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                </p>
-                            </div>
-                            </div>
-                        </div>
-        
-                           <div class="col-sm-4 col-lg-4 col-md-4">
-                        <div class="thumbnail">
-                            <img src="img/bed1.jpg" alt="">
-                            <div class="caption">
-                                <h4><a href="http://localhost/onlineshopping/product_detail.php?product_id=1">name</a>
-                                </h4>
-                                <p>details: see more detail and buy it to be your own - <a target="_blank" href="http://localhost/onlineshopping/product_detail.php?product_id=1">Click</a>.</p>
-                            </div>
-                            <div class="ratings">
-                                <p class="pull-right">New!</p>
-                                <p>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star-empty"></span>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-          <div class="col-sm-4 col-lg-4 col-md-4">
-                        <div class="thumbnail">
-                            <img src="img/bed1.jpg" alt="">
-                            <div class="caption">
-                                <h4><a href="http://localhost/onlineshopping/product_detail.php?product_id=1">name</a>
-                                </h4>
-                                <p>details: see more detail and buy it to be your own - <a target="_blank" href="http://localhost/onlineshopping/product_detail.php?product_id=1">Click</a>.</p>
-                            </div>
-                            <div class="ratings">
-                                <p class="pull-right">New!</p>
-                                <p>
-                                    <span class="glyphicon glyphicon-star-empty"></span>
-                                    <span class="glyphicon glyphicon-star-empty"></span>
-                                    <span class="glyphicon glyphicon-star-empty"></span>
-                                    <span class="glyphicon glyphicon-star-empty"></span>
-                                    <span class="glyphicon glyphicon-star-empty"></span>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-
-          <p>&nbsp;</p>
-          <p>&nbsp;</p>
-          <h2>Contact Us</h2>
-          <address align="center">
-          <strong>4AngelsShopping</strong> <br>
-          CPE 11st floors. <br>
-          126 Pracha Uthit Rd <br>
-          Khwaeng Bang Mot, BKK 10140 <br>
-          </address>
-          <address align="center">
-          <abbr title="Phone">Phone:</abbr> (+66) 08536475 <br>
-          <abbr title="Email">Email:</abbr> <a href="mailto:#">mnblpnmt@4angels.com</a>
-          </address>
-          <p>&nbsp;</p>
-          <div class="jquery-script-ads" align="center"><script type="text/javascript"><!--
-            google_ad_client = "ca-pub-2783044520727903";
-            /* jQuery_demo */
-            google_ad_slot = "2780937993";
-            google_ad_width = 728;
-            google_ad_height = 90;
-            //-->
-            </script>
-            <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
-			
-		</div>	
+			</div>
 		</div>
 	</div>
-</div>
+
+	<!-- Modal -->
+	<div class="container">
+	<div class="row">
+	<div class="col-xs-12">
+		<div class="modal" id="login" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button class="close" data-dismiss="modal">&times;</button>
+
+						<div class="alert alert-warning" style="display:none;" id="show_error">
+							<strong>กรุณากรอกข้อมูลให้ครบ</strong>
+						</div>
+
+						<div class="alert alert-warning" style="display:none;" id="show_error3">
+							<strong>ไม่พบข้อมูลของท่าน กรุณากรอกใหม่</strong>
+						</div>
+
+						<div class="alert alert-danger" style="display:none;" id="show_error2">
+							<strong>เกิดข้อผิดพลาด</strong>
+						</div>
+
+						<h4>Sign In</h4>
+					</div>
+
+					<div class="modal-body">
+						<form id="login">
+							<div class="form-group">
+								<label for="user">Username</label>
+								<input type="text" class="form-control" id="user" placeholder="Username" ng-model="login.user">
+							</div>
+
+							<div class="form-group">
+								<label for="pass">Password</label>
+								<input type="password" class="form-control" id="pass" placeholder="Password" ng-model="login.pass">
+							</div>
+
+							<div class="modal-footer">
+								<button type="submit" class="btn btn-primary" ng-click="loginpage();">Sign In</button>
+								<button class="btn btn-default" data-dismiss="modal">Close</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	</div>
+	</div>
+
+	<div class="container">
+	<div class="row">
+	<div class="col-xs-12">
+		<div class="modal" id="register" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button class="close" data-dismiss="modal">&times;</button>
+
+						<div class="alert alert-warning" style="display:none;" id="show_error">
+							<strong>กรุณากรอกข้อมูลให้ครบ</strong>
+						</div>
+
+						<div class="alert alert-danger" style="display:none;" id="show_error2">
+							<strong>เกิดข้อผิดพลาด</strong>
+						</div>
+
+						<div class="alert alert-success" style="display:none;" id="show_success">
+							<strong>บันทึกข้อมูลเรียบร้อยแล้ว</strong>
+						</div>
+
+						<h4>Register</h4>
+					</div>
+
+					<div class="modal-body">
+						<form id="register">
+							<div class="form-group" ng-class="{strike: deleted, bold: important,'has-error' : userError}">
+								<label for="user">Username</label>
+								<input type="text" class="form-control" id="user" placeholder="Username" ng-model="regist.user" ng-blur="checkUsers(regist.user);">
+							</div>
+							<div class="form-group">
+								<label for="pass">Password</label>
+								<input type="password" class="form-control" id="pass" placeholder="Password" ng-model="regist.pass">
+							</div>
+							<div class="form-group">
+								<label for="fname">First Name</label>
+								<input type="text" class="form-control" id="fname" placeholder="First name" ng-model="regist.fname">
+							</div>
+							<div class="form-group">
+								<label for="lname">Last Name</label>
+								<input type="text" class="form-control" id="lname" placeholder="Last name" ng-model="regist.lname">
+							</div>
+							<div class="form-group">
+								<label for="email">Email</label>
+								<input type="text" class="form-control" id="email" placeholder="Email" ng-model="regist.email">
+							</div>
+							<div class="form-group">
+								<label for="gender">Gender</label>
+								<div class="form-check">
+									<input type="radio" class="form-check-input" id="gender" ng-model="regist.gender" value="m"> Male
+								<!-- </div>
+								<div class="form-check"> -->
+									<input type="radio" class="form-check-input" id="gender" ng-model="regist.gender" value="f"> Female
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label for="dob">Date of Birth</label>
+		            			<div class="input-group date">
+		            				<span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+					                <input type="date" class="form-control" placeholder="Date of Birth" ng-model="regist.dob">
+					            </div>
+					        </div>
+
+							<div class="form-group">
+								<label for="address">Address</label>
+								<textarea class="form-control" id="address" placeholder="Address" cols="30" rows="5" ng-model="regist.address"></textarea>
+							</div>
+							<div class="form-group">
+								<label for="tel">Tel</label>
+								<input type="text" class="form-control" id="tel" placeholder="Tel" ng-model="regist.tel">
+							</div>
+							<div class="form-group">
+								<input type="checkbox"> I accept the term.
+							</div>
+
+							<div class="modal-footer">
+								<button type="submit" class="btn btn-success" ng-click="registerpage();" ng-disabled="userError">Sign Up</button>
+								<button type="reset" class="btn btn-danger">Reset</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	</div>
+	</div>
+
+
 
 	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 	<script src="assets/js/bootstrap.min.js"></script>
 	<script src="assets/js/angular.min.js"></script>
 	<script src="assets/js/app.js"></script>
-	<script src="assets/angularjs/mainController.js"></script>
+	<script src="assets/angularjs/indexController.js"></script>
 	<script src="assets/angularjs/indexService.js"></script>
     
 
