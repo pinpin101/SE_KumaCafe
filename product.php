@@ -131,9 +131,9 @@
 					<div class="row">
 						<div class="col-sm-6 col-lg-6 col-md-6">
                         	<div class="thumbnail">
-                        	    <img src="img/coffee.jpg" alt="">
+                        	    <img src="img/coffee.jpg">
                         	    <div class="caption">
-                             	   <h4><a href="http://localhost/onlineshopping/product_detail.php?product_id=1">KUMA Coffee</a></h4>
+                             	   <h4><a href="http://localhost/SEproject/product_detail.php?product_id=1">KUMA Coffee</a></h4>
                            		</div>
                             	<div class="ratings">
 									<p class = "pull-right">Price</p>
@@ -144,9 +144,9 @@
 					
 						<div class="col-sm-6 col-lg-6 col-md-6">
                         	<div class="thumbnail">
-                            	<img src="img/smoothie.jpg" alt="">
+                            	<img src="img/smoothie.jpg">
                            		<div class="caption">
-                                	<h4><a href="http://localhost/onlineshopping/product_detail.php?product_id=1">KUMA Smoothie</a></h4>
+                                	<h4><a href="http://localhost/SEproject/product_detail.php?product_id=1">KUMA Smoothie</a></h4>
                            		</div>
                             	<div class="ratings">
 									<p class = "pull-right">Price</p>
@@ -157,9 +157,9 @@
 
 						<div class="col-sm-6 col-lg-6 col-md-6">
                         	<div class="thumbnail">
-                          		<img src="img/hotmilk.jpg" alt="">
+                          		<img src="img/hotmilk.jpg">
                             	<div class="caption">
-                                	<h4><a href="http://localhost/onlineshopping/product_detail.php?product_id=1">KUMA Hot Milk</a></h4>
+                                	<h4><a href="http://localhost/SEproject/product_detail.php?product_id=1">KUMA Hot Milk</a></h4>
                             	</div>
                             	<div class="ratings">
 									<p class = "pull-right">Price</p>
@@ -170,9 +170,9 @@
 				
 						<div class="col-sm-6 col-lg-6 col-md-6">
                         	<div class="thumbnail">
-                            	<img src="img/beer.jpg" alt="">
+                            	<img src="img/beer.jpg">
                             	<div class="caption">
-                                	<h4><a href="http://localhost/onlineshopping/product_detail.php?product_id=1">KUMA Beer</a></h4>
+                                	<h4><a href="http://localhost/SEproject/product_detail.php?product_id=1">KUMA Beer</a></h4>
                             	</div>
                             	<div class="ratings">
 									<p class = "pull-right">Price</p>
