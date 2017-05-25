@@ -138,9 +138,9 @@
 		<div class="row">
 			 <div class="col-sm-6 col-lg-6 col-md-6">
                         <div class="thumbnail">
-                            <img src="img/bed1.jpg" alt="">
+                            <img src="img/coffee.jpg" alt="">
                             <div class="caption">
-                                <h4><a href="http://localhost/onlineshopping/product_detail.php?product_id=1">Name</a>
+                                <h4><a href="http://localhost/onlineshopping/product_detail.php?product_id=1">KUMA Coffee</a>
                                 </h4>
                             </div>
                             <div class="ratings">
@@ -153,9 +153,9 @@
 					
 				<div class="col-sm-6 col-lg-6 col-md-6">
                         <div class="thumbnail">
-                            <img src="img/bed1.jpg" alt="">
+                            <img src="img/smoothie.jpg" alt="">
                             <div class="caption">
-                                <h4><a href="http://localhost/onlineshopping/product_detail.php?product_id=1">Name</a>
+                                <h4><a href="http://localhost/onlineshopping/product_detail.php?product_id=1">KUMA Smoothie</a>
                                 </h4>
                             </div>
                             <div class="ratings">
@@ -168,9 +168,9 @@
 
 				<div class="col-sm-6 col-lg-6 col-md-6">
                         <div class="thumbnail">
-                            <img src="img/bed1.jpg" alt="">
+                            <img src="img/hotmilk.jpg" alt="">
                             <div class="caption">
-                                <h4><a href="http://localhost/onlineshopping/product_detail.php?product_id=1">Name</a>
+                                <h4><a href="http://localhost/onlineshopping/product_detail.php?product_id=1">KUMA Hot Milk</a>
                                 </h4>
                             </div>
                             <div class="ratings">
@@ -183,9 +183,9 @@
 				
 				<div class="col-sm-6 col-lg-6 col-md-6">
                         <div class="thumbnail">
-                            <img src="img/bed1.jpg" alt="">
+                            <img src="img/beer.jpg" alt="">
                             <div class="caption">
-                                <h4><a href="http://localhost/onlineshopping/product_detail.php?product_id=1">Name</a>
+                                <h4><a href="http://localhost/onlineshopping/product_detail.php?product_id=1">KUMA Beer</a>
                                 </h4>
                             </div>
                             <div class="ratings">
