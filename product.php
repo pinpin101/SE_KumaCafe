@@ -1,19 +1,73 @@
-<?php @session_start(); @ob_start(); ?>
+<?php @session_start(); @ob_start();?>
 
 <!DOCTYPE html>
 <html lang="en" ng-app="app">
 <head>
 	<meta charset="UTF-8">
-	<meta name="baseUrl" content="http://localhost/dbproject/">
-	<title>4AngelsShopping</title>
+	<meta name="baseUrl" content="http://localhost/SEproject/">
+	<title>Kuma Cafe</title>
+    
 	<style>
+  	@import url('http://fonts.googleapis.com/css?family=Gabriela');
+  	.content-page h1,.content-page h2 {
+      font-family: 'Gabriela', Tahoma, sans-serif;
+      font-size: 3.7em;
+      font-weight: 700;
+      line-height: 1.55em;
+      margin-bottom: 18px;
+      text-align: center;
+      color: #514b53;
+      letter-spacing: -0.06em;
+      text-shadow: 1px 1px 0 rgba(255,255,255,0.8);
+    }
+
+	.content-page h3 { color: #514b53; font-family: 'Rouge Script', cursive; font-size: 18px; font-weight: normal; line-height: 0px; margin: 0 0 50px; text-align: center; text-shadow: 1px 1px 2px #082b34; }
+	
+.content-page p { color: #514b53; font-family: 'Raleway',sans-serif; font-size: 16px; font-weight: 500; line-height: 22px;  text-align: center; margin: 0 0 24px; }
+
 		.content-page{
 			margin-top: 65px;
 		}
+		
+	table {
+			background-color: #FFBE7D;
+			font-family: arial, sans-serif;
+			border-collapse: collapse;
+			width: 15%;
+		}
+
+		th {
+			font-size: 20px;
+			background-color: #FFFFFF;
+			text-align: center;
+			padding: 20px;
+		}
+
+		td {
+			border-bottom: 2px solid #FFFF88; 
+			text-align: center;
+			padding: 20px;
+		}	
 	</style>
+
+    
 </head>
-<link rel="stylesheet" href="assets/css/bootstrap.min.css">
-<link rel="stylesheet" href="assets/css/bootstrap-theme.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/bootstrap-theme.min.css">
+    <!-- Custom CSS -->
+    <link href="assets/css/modern-business.css" rel="stylesheet">
+
+
+    <!-- Custom Fonts -->
+    <link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    
+    <!-- pop up section -->
+    
+    
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+  <link rel="icon" href="img/icon.png">
+
 
 <body id="page-top" ng-controller="mainController">
 	<!-- Navigation -->
@@ -26,7 +80,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand page-scroll" href="#page-top"><img src="img/4Angelslogo.png" height="31px"></a>
+				<a class="navbar-brand page-scroll" href="index.php"><img src="img/4Angelslogo.png" height="31px"></a>     <!--  ******  -->
 			</div>
 			<div class="collapse navbar-collapse navbar-ex1-collapse">
 				<ul class="nav navbar-nav">
@@ -38,12 +92,6 @@
 						if($admin == true || $member == true) : ?>
 					<li><a href="cart.php" class="page-scroll">Cart</a></li>
 					<?php endif; ?>
-					<?php
-						$admin = isset($_SESSION['adminpage']) ? $_SESSION['adminpage'] : null;
-						if($admin == true) : ?>
-					<li><a href="promotion.php" class="page-scroll">Promotion</a></li>
-					<li><a href="member.php" class="page-scroll">Member</a></li>
-					<?php endif; ?>
 				</ul>
 
 				<ul class="nav navbar-nav navbar-right">
@@ -51,72 +99,78 @@
 						$admin = isset($_SESSION['adminpage']) ? $_SESSION['adminpage'] : null;
 						$member = isset($_SESSION['memberpage']) ? $_SESSION['memberpage'] : null;
 						if($admin == false && $member == false) : ?>
-					<li><a href="register.php"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-					<li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Sign In</a></li>
-					<?php endif; ?>
-					<?php
-						$admin = isset($_SESSION['adminpage']) ? $_SESSION['adminpage'] : null;
-						$member = isset($_SESSION['memberpage']) ? $_SESSION['memberpage'] : null;
-						if($admin == true || $member == true) : ?>
-					<li><a href="profile.php"><span class="glyphicon glyphicon-user"></span> Hello, {{ name }}</a></li>
-					<li><a href="logout.php"><span class="glyphicon glyphicon-log-out"></span> Sign Out</a></li>
+					<li><a href="#register"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+					<li><a href="#login"><span class="glyphicon glyphicon-log-in"></span> Sign In</a></li>
 					<?php endif; ?>
 				</ul>
 			</div>
 		</div>
 	</nav>
+ 
 
+    <!-- Page Content -->
 
+	<div class="content-page">
+		<div class="container">
+    	<div class="col-md-3"> 
+		<h3 class="lead">MENU</h3>
+        <table>
+			<tr>
+				<th>CATEGORY</th>
+    
+			</tr>
+			<tr>
+				<td>MAIN COURSE</td>
+    
+			</tr>
+			<tr>
+				<td>DRINK</td>
+    
+			</tr>
+			<tr>
+				<td>DESSERT</td>
+			</tr>  
 
-<div class="content-page">
-	<div class="container">
+		</table>
+         
+       	<div class="col-md-9">
 		<div class="well">
 		<div class="row">
-			<div class="col-md-3"></div>
-			<div class="col-md-9">
-
-
-
-
-<h1>Product List</h1>
-
-<div class = "well">
-<p><a href = "addproduct.php">Add new product</a>
-<a href = "deleteproduct.php">Delete product</a>
-</p>
-<table width="600" border="1" align="center" bordercolor="#666666">
-  <tr>
-    <td width="91" align="center" bgcolor="#CCCCCC"><strong>image</strong></td>
-    <td width="200" align="center" bgcolor="#CCCCCC"><strong>name</strong></td>
-    <td width="44" align="center" bgcolor="#CCCCCC"><strong>price</strong></td>
-    <td width="100" align="center" bgcolor="#CCCCCC"><strong>detail</strong></td>
-  </tr>
-  
-  
-  <?php
-  //connect db
-  include("dbconnection.inc");
-  $sql = "select * from product order by product_id";  //call all products to show in page
-  $result = mysql_query($sql);
-  while($row = mysql_fetch_array($result))
-  {
-  	echo "<tr>";
-	echo "<td align='center'><img src='img/" . $row["product_img"] ." ' width='80'></td>";
-	echo "<td align='left'>" . $row["product_name"] . "</td>";
-    echo "<td align='center'>" .number_format($row["product_price"],2). "</td>";
-    echo "<td align='center'><a href='product_detail.php?product_id=$row[product_id]'>click</a></td>";
-	echo "</tr>";
-  }
-  ?>
-</table>
-
-				
-			</div>
+			 <div class="col-sm-4 col-lg-4 col-md-4">
+                        <div class="thumbnail">
+                            <img src="img/bed1.jpg" alt="">
+                            <div class="caption">
+                                <h4><a href="http://localhost/onlineshopping/product_detail.php?product_id=1">name</a>
+                                </h4>
+                            </div>
+                            <div class="ratings">
+								<p class = "pull-right">Price</p>
+                                <button class="button">Buy</button>
+                                
+                            </div>
+                        </div>
+                    </div>
+					
+				<div class="col-sm-4 col-lg-4 col-md-4">
+                        <div class="thumbnail">
+                            <img src="img/bed1.jpg" alt="">
+                            <div class="caption">
+                                <h4><a href="http://localhost/onlineshopping/product_detail.php?product_id=1">name</a>
+                                </h4>
+                            </div>
+                            <div class="ratings">
+								<p class = "pull-right">Price</p>
+                                <button class="button">Buy</button>
+                                
+                            </div>
+                        </div>
+                    </div>	
+                			
 		</div>	
 		</div>
+        </div>
+    </div>
 	</div>
-</div>
-
 
 	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 	<script src="assets/js/bootstrap.min.js"></script>
@@ -124,5 +178,11 @@
 	<script src="assets/js/app.js"></script>
 	<script src="assets/angularjs/mainController.js"></script>
 	<script src="assets/angularjs/indexService.js"></script>
+    
+
+
+
+
 </body>
+
 </html>
