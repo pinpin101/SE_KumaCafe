@@ -60,14 +60,14 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand page-scroll" href="index.php"><img src="img/homebutton.png" height="50"></a>     <!--  ******  -->
+				<a class="navbar-brand page-scroll" href="index.php"><img src="img/homebutton.png" height="40"></a>
 			</div>
 			<div class="collapse navbar-collapse navbar-ex1-collapse">
 				<ul class="nav navbar-nav">
-					<li><a href="product.php" class="page-scroll"><img src="img/menubutton.png" height="50"></a></li>
-					<li><a href="#" class="page-scroll"><img src="img/promotionbutton.png" height="50"></a></li>
-					<li><a href="#" class="page-scroll"><img src="img/reservationbutton.png" height="50"></a></li>
-					<li><a href="#" class="page-scroll"><img src="img/contactbutton.png" height="50"></a></li>
+					<li><a href="product.php" class="page-scroll"><img src="img/menubutton.png" height="40"></a></li>
+					<li><a href="#" class="page-scroll"><img src="img/promotionbutton.png" height="40"></a></li>
+					<li><a href="#" class="page-scroll"><img src="img/reservationbutton.png" height="40"></a></li>
+					<li><a href="#" class="page-scroll"><img src="img/contactbutton.png" height="40"></a></li>
 				</ul>
 
 				<ul class="nav navbar-nav navbar-right">
@@ -75,8 +75,8 @@
 						$admin = isset($_SESSION['adminpage']) ? $_SESSION['adminpage'] : null;
 						$member = isset($_SESSION['memberpage']) ? $_SESSION['memberpage'] : null;
 						if($admin == false && $member == false) : ?>
-					<li><a href="#register" data-toggle="modal"><img src="img/signupbutton.png" height="50"></a></li>
-					<li><a href="#login" data-toggle="modal"><img src="img/signinbutton.png" height="50"></a></li>
+					<li><a href="#register" data-toggle="modal"><img src="img/signupbutton.png" height="40"></a></li>
+					<li><a href="#login" data-toggle="modal"><img src="img/signinbutton.png" height="40"></a></li>
 					<?php endif; ?>
 				</ul>
 			</div>
@@ -84,7 +84,6 @@
 	</nav>
 
     <!-- Page Content -->
-
 	<div class="content-page">
 		<div class="container">
     		<div class="col-md-8"> 
@@ -272,17 +271,12 @@
 	</div>
 
 
-
 	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 	<script src="assets/js/bootstrap.min.js"></script>
 	<script src="assets/js/angular.min.js"></script>
 	<script src="assets/js/app.js"></script>
 	<script src="assets/angularjs/indexController.js"></script>
 	<script src="assets/angularjs/indexService.js"></script>
-    
-
-
-
 
 </body>
 
